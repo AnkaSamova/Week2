@@ -15,26 +15,26 @@ public class Main {
     double y = sc.nextDouble();
     System.out.println("Выберите операцию (+, -, *, /)");
     char operation = sc.next().charAt(0);
-    String oper = "";
+    String operDescript = "";
     double res = 0;
     switch (operation) {
         case '+':
         res = Calculator.sumUp(x,y);
-        oper = "Операция сложения: ";
+        operDescript = "Операция сложения: ";
         break;
         case '-':
         res = Calculator.subtract(x,y);
-        oper = "Операция вычитания: ";
+        operDescript = "Операция вычитания: ";
         break;
         case '*':
         res = Calculator.multiply(x,y);
-        oper = "Операция умножения: ";
+        operDescript = "Операция умножения: ";
         break;
         case '/':
         res = Calculator.division(x,y);
-        oper = "Операция деления: ";
+        operDescript = "Операция деления: ";
         break;
     }
-    ResultWriterService.printResult(oper, x, y, operation, res);
+    ResultWriterService.printResult(operDescript, x, y, operation, res);
     }
 }
